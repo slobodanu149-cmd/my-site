@@ -80,13 +80,19 @@
     </div>
 </div>
 <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Оставь контакты</h2>
-            <input type="text" placeholder="Твое имя" class="modal-input">
-            <input type="email" placeholder="Email" class="modal-input">
-            <button class="send-btn">Отправить</button>
-        </div>
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Оставь свои контакты</h2>
+        
+        <form action="https://formspree.io/f/mnjbyegv" method="POST">
+            <input type="text" name="name" placeholder="Твое имя" class="modal-input" required>
+            <input type="email" name="email" placeholder="Твой Email" class="modal-input" required>
+            <textarea name="message" placeholder="Сообщение" class="modal-input" style="height: 80px;"></textarea>
+            
+            <button type="submit" class="send-btn" style="width: 100%; margin-top: 10px;">Отправить</button>
+        </form>
+    </div>
+</div>
     </div>
 
     <footer>
@@ -129,6 +135,20 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 </body>
-
+<form
+  action="https://formspree.io/f/mnjbyegv"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
 </html>
 
