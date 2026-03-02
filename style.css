@@ -246,3 +246,37 @@ html {
     background-color: #333 !important;
     color: white !important;
 }
+/* Настройки для мобильных устройств */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column; /* Карточки встанут друг под друга */
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Карточка займет почти всю ширину экрана */
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Уменьшим заголовок, чтобы он влезал */
+    }
+
+    .nav-links {
+        display: none; /* Скроем меню для простоты (обычно тут делают "бургер") */
+    }
+}
+/* Адаптация под мобилки */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+}

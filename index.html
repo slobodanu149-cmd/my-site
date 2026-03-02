@@ -92,23 +92,25 @@
     <footer>
         <p>&copy; 2024 Мой Проект. Тест пройден успешно.</p>
     </footer>
-
-    <script>
-    // 1. ЛОГИКА ТЕМЫ
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Переключатель темы
     const themeBtn = document.getElementById('theme-toggle');
-    themeBtn.onclick = function() {
-        document.body.classList.toggle('dark-theme');
-        console.log("Тема переключена"); // Это для проверки в консоли
-    };
+    if (themeBtn) {
+        themeBtn.onclick = function() {
+            document.body.classList.toggle('dark-theme');
+        };
+    }
 
-    // 2. ЛОГИКА МОДАЛЬНОГО ОКНА
+    // Модальное окно
     const modal = document.getElementById("myModal");
-    const btn = document.getElementById("btn"); // Проверь, что у кнопки 'Связаться' именно id="btn"
-    const span = document.getElementsByClassName("close")[0];
+    const btn = document.getElementById("btn"); // Ищем кнопку по ID
+    const span = document.querySelector(".close"); // Ищем крестик по классу
 
-    if (btn) {
+    if (btn && modal) {
         btn.onclick = function() {
             modal.style.display = "block";
+            console.log("Окно открыто");
         }
     }
 
@@ -118,14 +120,15 @@
         }
     }
 
+    // Закрытие при клике на темный фон
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
     }
+});
 </script>
 </body>
-
 
 </html>
 
