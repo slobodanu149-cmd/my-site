@@ -84,15 +84,17 @@
         <span class="close">&times;</span>
         <h2>Оставь свои контакты</h2>
         
-        <form action="https://formspree.io/f/mnjbyegv" method="POST">
+        <form action="https://formspree.io/f/mnjbyegv" method="POST" id="contact-form">
             <input type="text" name="name" placeholder="Твое имя" class="modal-input" required>
             <input type="email" name="email" placeholder="Твой Email" class="modal-input" required>
             <textarea name="message" placeholder="Сообщение" class="modal-input" style="height: 80px;"></textarea>
             
-            <button type="submit" class="send-btn" style="width: 100%; margin-top: 10px;">Отправить</button>
+            <button type="submit" class="send-btn" style="width: 100%; margin-top: 10px; background: #e74c3c; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer;">
+                Отправить
+            </button>
         </form>
     </div>
-</div>
+
     </div>
 
     <footer>
